@@ -1,9 +1,13 @@
 a = input()
 b = a.zfill(2)
 index = 0
-a_ = [int(char) for char in b]
-c = int(a_[0] + a_[1])
-c_ = [int(char) for char in c]
-while a_[0] + a_[1] == a :
+ori = b
+while True:
+    a_ = [int(char) for char in b]
+    c = a_[0] + a_[1]
+    b = b[-1] + str(c)[-1]
+    index = index + 1
+    if b == ori:
+        break
 
-    index += 1
+print(index)

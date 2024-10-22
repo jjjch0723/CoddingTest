@@ -1,7 +1,7 @@
-message = input().strip()
+kakakotalk = input().strip()
 
-happy_count = message.count(":-)")
-sad_count = message.count(":-(")
+happy_count = kakakotalk.count(":-)")
+sad_count = kakakotalk.count(":-(")
 
 if happy_count == 0 and sad_count == 0:
     print("none")

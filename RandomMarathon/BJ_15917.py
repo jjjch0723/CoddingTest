@@ -1,15 +1,16 @@
-querry = int(input())
+import sys
 
-result = []
-for i in range(querry):
-    a = int(input())
-    
-    # 2의 거듭제곱인지 확인
+input = sys.stdin.read
+data = input().split()
+Q = int(data[0])
+
+results = []
+
+for i in range(1, Q + 1):
+    a = int(data[i])
     if a & (a - 1) == 0:
-        result.append(1)
+        results.append('1')
     else:
-        result.append(0)
+        results.append('0')
 
-# 결과 출력
-for i in result:
-    print(i)
+print("\n".join(results))
